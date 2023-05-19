@@ -20,14 +20,15 @@ runs:
   using: 'composite'
   steps:
   - name: Update feature badge
-    shell: bash
     uses: actions/setup-python@v4
     with:
       python-version: '3.10'
 
-  - run: python update_feature_badge.py ${{ inputs.method }} ${{ inputs.file_path }} ${{ inputs.project_name }}
+  - shell: bash
+    run: python update_feature_badge.py ${{ inputs.method }} ${{ inputs.file_path }} ${{ inputs.project_name }}
 
   - name: Commit and push
+    shell: bash
     run: |
       git config --global user.name "GitHub Actions"
       git config --global user.email "actions@github.com"
