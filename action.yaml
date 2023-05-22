@@ -19,12 +19,16 @@ inputs:
 runs:
   using: 'composite'
   steps:
-  - name: Update feature badge
+  - name: Checkout
+    uses: actions/checkout@v3
+
+  - name: Setup Python
     uses: actions/setup-python@v4
     with:
       python-version: '3.10'
 
-  - shell: bash
+  - name: Update badge
+    shell: bash
     run: python update_feature_badge.py ${{ inputs.method }} ${{ inputs.file_path }} ${{ inputs.project_name }}
 
   - name: Commit and push
