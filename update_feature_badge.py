@@ -21,6 +21,7 @@ def increase_feature_diff(path):
 
         with open(path, "wt") as fout:
             fout.write(fin.replace(current_badge_url, new_badge_url))
+            print("Updated feature diff badge")
 
 
 def reset_feature_diff(path):
@@ -33,6 +34,7 @@ def reset_feature_diff(path):
         new_badge_url = UP_TO_DATE
         with open(path, "wt") as fout:
             fout.write(fin.replace(current_badge_url, new_badge_url))
+            print("Resetted feature diff badge")
 
 
 if __name__ == "__main__":
