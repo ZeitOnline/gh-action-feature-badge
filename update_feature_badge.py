@@ -50,7 +50,7 @@ if __name__ == "__main__":
         with open(path, "a") as f:
             print("Creating feature diff badge")
             f.write(
-                f"![Feature Diff]({UP_TO_DATE})](https://github.com/ZeitOnline/{repo_name}/actions?query=branch%3Amain)"
+                f"[![Feature Diff]({UP_TO_DATE})](https://github.com/ZeitOnline/{repo_name}/actions?query=branch%3Amain)"
             )
 
     with open(path, "rt") as fin:
@@ -62,7 +62,7 @@ if __name__ == "__main__":
                 fin.replace(
                     first_line,
                     first_line
-                    + f" ![Feature Diff]({UP_TO_DATE})](https://github.com/ZeitOnline/{repo_name}/actions?query=branch%3Amain)",
+                    + f" [![Feature Diff]({UP_TO_DATE})](https://github.com/ZeitOnline/{repo_name}/actions?query=branch%3Amain)",
                 )
             )
 
