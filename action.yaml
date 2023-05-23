@@ -36,7 +36,7 @@ runs:
 
   - name: Update badge
     shell: bash
-    run: python update_feature_badge.py ${{ inputs.method }} "${{ github.action_path }}/${{ inputs.file_path }}" ${{ inputs.project_name }}
+    run: python "${{ github.action_path }}/update_feature_badge.py" ${{ inputs.method }} ${{ inputs.file_path }} ${{ inputs.project_name }}
 
   - name: Commit and push
     shell: bash
