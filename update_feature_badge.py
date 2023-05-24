@@ -37,34 +37,42 @@ def reset_feature_diff(path):
             print("Resetted feature diff badge")
 
 
-if __name__ == "__main__":
-    method = sys.argv[1]
-    path = sys.argv[2]
-    repo_name = sys.argv[3]
-
+def prepare(path):
+    """
+    Create the given file if it does not exist.
+    Insert the new badge with state 'Up To Date' if not already present.
+    """
     if not exists(path):
         with open(path, "x"):
             print(f"Creating file {path}")
 
     if getsize(path) == 0:
         with open(path, "a") as f:
-            print("Creating feature diff badge")
+            print("Creating feature diff badge in empty file")
             f.write(
                 f"[![Feature Diff]({UP_TO_DATE})](https://github.com/ZeitOnline/{repo_name}/actions?query=branch%3Amain)"
             )
-
-    with open(path, "rt") as fin:
-        fin = fin.read()
-        if "![Feature Diff]" not in fin:
-            first_line = open(path, "r").readlines()[0].split("\n")[0]
-            print("Creating feature diff badge")
-            open(path, "w").write(
-                fin.replace(
-                    first_line,
-                    first_line
-                    + f" [![Feature Diff]({UP_TO_DATE})](https://github.com/ZeitOnline/{repo_name}/actions?query=branch%3Amain)",
+    else:
+        with open(path, "rt") as fin:
+            fin = fin.read()
+            if "![Feature Diff]" not in fin:
+                first_line = open(path, "r").readlines()[0].split("\n")[0]
+                print("Creating feature diff badge")
+                open(path, "w").write(
+                    fin.replace(
+                        first_line,
+                        first_line
+                        + f" [![Feature Diff]({UP_TO_DATE})](https://github.com/ZeitOnline/{repo_name}/actions?query=branch%3Amain)",
+                    )
                 )
-            )
+
+
+if __name__ == "__main__":
+    method = sys.argv[1]
+    path = sys.argv[2]
+    repo_name = sys.argv[3]
+
+    prepare(path)
 
     if method == "increase":
         increase_feature_diff(path)
