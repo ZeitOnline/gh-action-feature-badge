@@ -8,7 +8,7 @@ ONE_FEATURE_BEHIND = "https://img.shields.io/badge/Feature%20Diff-Prod%20One%20F
 MORE_THAN_ONE_FEATURE_BEHIND = "https://img.shields.io/badge/Feature%20Diff-Prod%20More%20Than%20One%20Feature%20Behind-eb4034.svg"
 
 
-def increase_feature_diff(path):
+def bump_feature_diff(path):
     with open(path, "rt") as fin:
         fin = fin.read()
         current_badge_url = fin.split("![Feature Diff](")[1].split(")")[0]
@@ -74,7 +74,7 @@ if __name__ == "__main__":
 
     prepare(path)
 
-    if method == "increase":
-        increase_feature_diff(path)
+    if method == "bump":
+        bump_feature_diff(path)
     elif method == "reset":
         reset_feature_diff(path)
