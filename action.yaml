@@ -3,7 +3,7 @@ description: 'Update the feature badge in the given file. The badge indicates ho
 
 inputs:
   method:
-    description: 'Define if the feature difference count should be increased or reset to 0. Choose between "increase" or "reset".'
+    description: 'Per default the feature difference is treated as having increased. Choose "reset", if a promotion to production is happening.'
     required: false
     default: 'bump'
 
