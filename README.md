@@ -9,9 +9,9 @@ Es empfiehlt sich, das Hochzählen an ein Deployment Update zu koppeln und das Z
 
 Es gibt drei verschiedene Zustände, die durch Badges dargestellt werden:
 
-1. ![Feature Diff](https://img.shields.io/badge/Feature%20Diff-Up%20To%20Date-33CD56.svg): Staging und Production sind auf dem gleichen Stand.
-2. ![Feature Diff](https://img.shields.io/badge/Feature%20Diff-Prod%20One%20Feature%20Behind-FFFF00.svg): Es gibt ein Deployment Update, welches noch nicht promoted wurde.
-3. ![Feature Diff](https://img.shields.io/badge/Feature%20Diff-Prod%20More%20Than%20One%20Feature%20Behind-eb4034.svg): Es gibt mehr als ein Deployment Update, welches noch nicht promoted wurde.
+1. ![Feature Diff](https://img.shields.io/badge/feature%20diff-up%20to%20date-33CD56.svg): Staging und Production sind auf dem gleichen Stand.
+2. ![Feature Diff](https://img.shields.io/badge/feature%20diff-prod%20one%20feature%20behind-FFFF00.svg): Es gibt ein Deployment Update, welches noch nicht promoted wurde.
+3. ![Feature Diff](https://img.shields.io/badge/feature%20diff-prod%20more%20than%20one%20feature%20behind-eb4034.svg): Es gibt mehr als ein Deployment Update, welches noch nicht promoted wurde.
 
 ## Inputs
 
