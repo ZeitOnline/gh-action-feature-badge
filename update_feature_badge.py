@@ -3,9 +3,9 @@ from os.path import exists, getsize
 
 
 # badge urls for staging/production feature diff
-UP_TO_DATE = "https://img.shields.io/badge/Feature%20Diff-Up%20To%20Date-33CD56.svg"
-ONE_FEATURE_BEHIND = "https://img.shields.io/badge/Feature%20Diff-Prod%20One%20Feature%20Behind-FFFF00.svg"
-MORE_THAN_ONE_FEATURE_BEHIND = "https://img.shields.io/badge/Feature%20Diff-Prod%20More%20Than%20One%20Feature%20Behind-eb4034.svg"
+UP_TO_DATE = "https://img.shields.io/badge/feature%20diff-up%20to%20date-33CD56.svg"
+ONE_FEATURE_BEHIND = "https://img.shields.io/badge/feature%20diff-prod%20one%20feature%20behind-FFFF00.svg"
+MORE_THAN_ONE_FEATURE_BEHIND = "https://img.shields.io/badge/feature%20diff-prod%20more%20than%20one%20feature%20behind-eb4034.svg"
 
 
 def bump_feature_diff(path):
