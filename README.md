@@ -1,8 +1,8 @@
 # GitHub Action: Feature Badge
 Diese GitHub Action liefert eine GitHub Badge als Indikator dafür, wie viele Features bereits auf Staging, aber noch nicht auf Production aktiv sind.
 Die Badge wird standardmäßig in die README.md eines Projekts eingefügt, es kann aber auch ein anderer Dateipfad angegeben werden.
-Ein Klick auf die Badge führt zu einer Übersicht der Actions, die auf `main` gelaufen sind. Dabei sieht man dann auf einen Blick, wie viele Deployment Updates es seit der letzten Promotion gab.
-Die Feature Badge Action kann auf zwei Arten genutzt werden: Entweder die Differenz der Features wird um eins hochgezählt, oder sie wird zurückgesetzt.
+Ein Klick auf die Badge führt zu einer Übersicht der Workflows, die auf `main` gelaufen sind. Dabei sieht man dann auf einen Blick, wie viele Deployment Updates es seit der letzten Promotion gab.
+Die Feature Badge Action kann genutzt werden, um die Differenz der Features entweder hochzuzählen oder zurückzusetzen.
 Es empfiehlt sich, das Hochzählen an ein Deployment Update zu koppeln und das Zurücksetzen an eine Promotion nach Production.
 
 ## Badges
