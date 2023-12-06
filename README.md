@@ -33,7 +33,7 @@ Hochzählen der Differenz:
         <job_name>:
             name: <name>
             needs: <deployment update>
-            runs-on: [self-hosted, x64, linux, ephemeral, zon-image-latest]
+            runs-on: zon-ubuntu-general-dind
             steps:
             - uses: ZeitOnline/gh-action-feature-badge@main
                 with:
@@ -45,7 +45,7 @@ Zurücksetzen der Differenz:
         <job_name>:
             name: <name>
             needs: <promotion to production>
-            runs-on: [self-hosted, x64, linux, ephemeral, zon-image-latest]
+            runs-on: zon-ubuntu-general-dind
             steps:
             - uses: ZeitOnline/gh-action-feature-badge@main
                 with:
